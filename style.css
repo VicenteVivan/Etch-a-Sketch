@@ -13,7 +13,23 @@ body {
     background-color: var(--main_black);
 }
 
+//Remove NumberInput Arrows
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 nav {
+    display: flex;
+    padding-left: 7vw;
+    align-items: center;
+    font-family: "Permanent Marker";
+    color: white;
+    font-size: 40px;
     min-height: 80px;
     background-color: var(--main_black);
     box-shadow: 0 5px 5px #080e1b;
@@ -21,6 +37,7 @@ nav {
 
 div#container {
     display: flex;
+    padding: 20px;
     justify-content: center;
     align-items: center;
     background-color: #121e3b;
@@ -30,6 +47,9 @@ div#container {
 }
 
 div#sketch {
+    display: flex;
+    /* height: 40vw;
+    width: 40vw; */
     height: 600px;
     width: 600px;
     flex-direction: column;
@@ -40,9 +60,135 @@ div.row {
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    flex-grow: 1;
 }
 
 div.cell {
     border: 1px solid gainsboro;
-    anima
+    box-sizing: border-box;
+    transition-duration: 500ms;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+div.cell:hover {
+    background-color: gainsboro;
+}
+
+div#controls {
+    background-color: var(--main_black);
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 602px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#controls #grid-size {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#controls #grid-size input#size {
+    background-color: #213770;
+    text-align: center;
+    color: gainsboro;
+    border-radius: 5px;
+    border: 0;
+    max-height: 50px;
+    width: 30%;
+}
+
+div,
+input,
+button {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 12px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+button {
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    transition-property: all;
+}
+
+#erase:hover,
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+#controls #grid-size button#size-button {
+    background-color: #0078be;
+    color: white;
+    border-radius: 5px;
+    border: 0;
+    height: 50px;
+    width: 60%;
+}
+
+div#more-controls {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#erase {
+    font-size: 20px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 0;
+}
+
+#reset {
+    border-radius: 10px;
+    border: 0;
+    font-size: 20px;
+    height: 80px;
+    width: 40%;
+}
+
+#colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.color {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px #080e1b;
+    transition-duration: 250ms;
+    transition-property: filter;
+    transition-timing-function: ease-in-out;
+}
+
+.color:hover {
+    filter: brightness(70%);
+}
+
+@media only screen and (max-width: 920px) {
+    div#container {
+        min-height: auto;
+        flex-direction: column-reverse;
+    }
+    div#sketch {
+        width: 80vw;
+        height: 80vw;
+    }
+    div#controls {
+        width: 80vw;
+    }
 }
