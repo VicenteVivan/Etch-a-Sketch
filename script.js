@@ -123,6 +123,8 @@ function createGrid(n) {
     loadDrawableCells();
 }
 
+createGrid(16);
+
 let size = $("size");
 let createGridBtn = $("size-button");
 
