@@ -94,6 +94,9 @@ div#controls {
 #controls #grid-size {
     display: flex;
     justify-content: space-evenly;
+    align-content: stretch;
+    min-height: 50px;
+    max-height: 50px;
     width: 100%;
 }
 
@@ -103,8 +106,6 @@ div#controls {
     color: gainsboro;
     border-radius: 5px;
     border: 0;
-    min-height: 50px;
-    max-height: 50px;
     width: 30%;
 }
 
@@ -138,8 +139,6 @@ button:hover {
     color: white;
     border-radius: 5px;
     border: 0;
-    min-height: 50px;
-    max-height: 50px;
     width: 60%;
 }
 
@@ -217,7 +216,7 @@ i.fas {
         width: 30%;
     }
     #size-button {
-        width: 60%;
+        width: 55%;
     }
     #more-controls {
         margin-top: 20px;
