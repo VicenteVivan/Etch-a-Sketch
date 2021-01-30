@@ -223,7 +223,9 @@ i.fas {
     }
     #erase {
         height: 40px;
-        width: 40px;
+        width: 25%;
+        text-align: center;
+        border-radius: 10px;
     }
     #reset {
         height: 40px;
