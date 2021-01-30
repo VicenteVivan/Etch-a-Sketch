@@ -138,6 +138,7 @@ button:hover {
     border-radius: 5px;
     border: 0;
     height: 50px;
+    max-height: 50px;
     width: 60%;
 }
 
@@ -203,6 +204,12 @@ i.fas {
     }
     div#controls {
         width: 80vw;
+    }
+    #size {
+        width: 30%;
+    }
+    #size-button {
+        width: 60%;
     }
     #more-controls {
         margin-top: 20px;
