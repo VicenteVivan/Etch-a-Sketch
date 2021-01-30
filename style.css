@@ -1,0 +1,48 @@
+:root {
+    --main_black: #0e172e;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: var(--main_black);
+}
+
+nav {
+    min-height: 80px;
+    background-color: var(--main_black);
+    box-shadow: 0 5px 5px #080e1b;
+}
+
+div#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121e3b;
+    border-radius: 10px;
+    min-height: 80vh;
+    margin: 5vh 5vw;
+}
+
+div#sketch {
+    height: 600px;
+    width: 600px;
+    flex-direction: column;
+    background-color: white;
+}
+
+div.row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+div.cell {
+    border: 1px solid gainsboro;
+    anima
+}
