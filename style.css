@@ -103,6 +103,7 @@ div#controls {
     color: gainsboro;
     border-radius: 5px;
     border: 0;
+    min-height: 50px;
     max-height: 50px;
     width: 30%;
 }
@@ -137,9 +138,13 @@ button:hover {
     color: white;
     border-radius: 5px;
     border: 0;
-    height: 50px;
+    min-height: 50px;
     max-height: 50px;
     width: 60%;
+}
+
+#controls #grid-size button#size-button:hover {
+    transform: none;
 }
 
 div#more-controls {
@@ -194,6 +199,9 @@ i.fas {
 }
 
 @media only screen and (max-width: 920px) {
+    nav {
+        font-size: 4vh;
+    }
     div#container {
         min-height: auto;
         flex-direction: column-reverse;
