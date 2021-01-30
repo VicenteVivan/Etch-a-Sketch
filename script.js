@@ -5,6 +5,7 @@ function $(id) {
 //Post-Used Variables
 let cells = [];
 let mainColor = "white";
+let clickErase = 1;
 
 //Colors Sub-Section
 (function colorList() {
@@ -49,18 +50,29 @@ let mainColor = "white";
             event.target.style.border = "3px solid white";
             event.target.style.boxSizing = "border-box";
             mainColor = event.target.style.backgroundColor;
+            clickErase++;
+            $("erase").style.backgroundColor = "#121e3b";
+            $("erase").style.color = "white";
         });
     });
 })();
 
 //Erase and Reset
-click = 1;
-$("erase").addEventListener("click", function () {
+
+$("erase").addEventListener("click", function (event) {
     document.querySelectorAll(".color").forEach((element) => {
         element.style.border = "0";
         element.style.padding = "20px";
     });
     mainColor = "white";
+    clickErase++;
+    if (clickErase % 2 == 0) {
+        event.target.style.backgroundColor = "white";
+        event.target.style.color = "black";
+    } else {
+        event.target.style.backgroundColor = "#121e3b";
+        event.target.style.color = "white";
+    }
 });
 
 $("reset").addEventListener("click", function () {

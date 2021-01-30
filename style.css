@@ -13,7 +13,7 @@ body {
     background-color: var(--main_black);
 }
 
-//Remove NumberInput Arrows
+/* Remove NumberInput Arrows */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -33,6 +33,10 @@ nav {
     min-height: 80px;
     background-color: var(--main_black);
     box-shadow: 0 5px 5px #080e1b;
+}
+
+nav img {
+    margin: 0 20px;
 }
 
 div#container {
@@ -140,15 +144,22 @@ button:hover {
 div#more-controls {
     display: flex;
     justify-content: space-evenly;
+    align-content: center;
     width: 100%;
 }
 
 #erase {
+    background-color: #121e3b;
+    color: white;
     font-size: 20px;
     height: 80px;
     width: 80px;
     border-radius: 50%;
     border: 0;
+}
+
+i.fas {
+    pointer-events: none;
 }
 
 #reset {
@@ -190,5 +201,16 @@ div#more-controls {
     }
     div#controls {
         width: 80vw;
+    }
+    #more-controls {
+        margin-top: 20px;
+    }
+    #erase {
+        height: 40px;
+        width: 40px;
+    }
+    #reset {
+        height: 40px;
+        width: 60%;
     }
 }
